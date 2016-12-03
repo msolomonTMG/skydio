@@ -63,5 +63,4 @@ app.controller('LogoutCtrl', function ($scope, $location, $http) {
  */
 app.controller('PageCtrl', function ( $scope, $location, $http ) {
   console.log("Page Controller reporting for duty.");
-
 });
