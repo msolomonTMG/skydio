@@ -1,0 +1,28 @@
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Products</h2>
+        <hr>
+      </div>
+    </div>
+    <!-- Example row of columns -->
+    <div class="row">
+      <div id="products">
+        <div v-for="product in products">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" v-bind:src="product.media.source" alt="Card image cap" height="100%" width="100%">
+              <div class="card-block">
+                <h4 class="card-title">{{ product.name }}</h4>
+                <p class="card-text">{{ product.description }}</p>
+                <a href="#/conclusion" class="btn btn-primary">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/products.js"></script>
