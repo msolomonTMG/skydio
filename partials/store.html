@@ -14,7 +14,7 @@
             <div class="card">
               <img class="card-img-top" v-bind:src="product.media.source" alt="Card image cap" height="100%" width="100%">
               <div class="card-block">
-                <h4 class="card-title">{{ product.name }}</h4>
+                <h4 class="card-title">{{ product.name }} <small class="float-xs-right">${{ product.price.formatted }}</small></h4>
                 <p class="card-text">{{ product.description }}</p>
                 <a href="#/conclusion" class="btn btn-primary">Buy Now</a>
               </div>

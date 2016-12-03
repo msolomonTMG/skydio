@@ -1,30 +1,73 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h1 class="display-3">EMP-524 Final Project</h1>
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-    <p><a class="btn btn-primary btn-lg" href="#/products" role="button">Shop Now &raquo;</a></p>
+    <h1 class="display-3">Skydio E-Commerce Site</h1>
+      <p>For the conclusion of this final project, you can find the SWOT Analysis
+      Business Justification, and Budget Plan in the navigation of this site.
+      The mission of this project was to commercialize an idea from the MIT list
+      of 35 inventors under 35 with an e-commerce strategy. I chose Skydio: a drone
+      company that specializes in AI and is well positioned to capitalize on an
+      emerging industry that is estimated to be worth over $120B by 2020. Behold,
+      the e-commerce site for Skydio!<p>
+      <a class="btn btn-primary btn-lg" href="#/store" role="button">Shop Now &raquo;</a>
+      <a class="btn btn-success btn-lg" href="#/conclusion" role="button">Conclusion &raquo;</a>
+    </p>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
-      <h2>Products</h2>
-      <hr>
+      <div class="alert alert-info alert-dismissible fade in" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <strong><i class="fa fa-info-circle" aria-hidden="true"></i></strong> This site was made for a class project and has no affiliation with Skydio
+      </div>
     </div>
   </div>
-  <!-- Example row of columns -->
-  <div class="row">
-    <div id="products">
-      <div v-for="product in products">
-        <div class="col-md-4">
-          <div class="card">
-            <img class="card-img-top" v-bind:src="product.media.source" alt="Card image cap" height="100%" width="100%">
-            <div class="card-block">
-              <h4 class="card-title">{{ product.name }}</h4>
-              <p class="card-text">{{ product.description }}</p>
-              <a href="#/conclusion" class="btn btn-primary">Buy Now</a>
+</div>
+
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Marketing Video</h2>
+        <hr>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <iframe width="100%" height="350px" src="https://www.youtube.com/embed/rYhPDn48-Sg" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="col-xs-12">
+        <small class="float-xs-right"><a href="https://www.youtube.com/channel/UCnaPFjG7OPhtNqiyYEaOuCQ">Skydio's YouTube channel</a></small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Products</h2>
+        <hr>
+      </div>
+    </div>
+    <!-- Example row of columns -->
+    <div class="row">
+      <div id="products">
+        <div v-for="product in products">
+          <div class="col-md-4">
+            <div class="card">
+              <img class="card-img-top" v-bind:src="product.media.source" alt="Card image cap" height="100%" width="100%">
+              <div class="card-block">
+                <h4 class="card-title">{{ product.name }}  <small class="float-xs-right">${{ product.price.formatted }}</small></h4>
+                <p class="card-text">{{ product.description }}</p>
+                <a href="#/conclusion" class="btn btn-primary">Buy Now</a>
+              </div>
             </div>
           </div>
         </div>
